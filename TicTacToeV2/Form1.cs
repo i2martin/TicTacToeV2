@@ -25,10 +25,10 @@ namespace TicTacToeV2
             button8.Enabled = false;
             button9.Enabled = false;
         }
-        int pobjedaX = 0;
-        int PobjedaO = 0;
-        string naPotezu = "x";
-        int brojPoteza = 0;
+        int winX = 0;
+        int winO = 0;
+        string onMove = "x";
+        int noOfMoves = 0;
 
         private void NewGame_Click(object sender, EventArgs e)
         {
@@ -42,50 +42,150 @@ namespace TicTacToeV2
             button8.Enabled = true;
             button9.Enabled = true;
             NewGame.Enabled = false;
+            noOfMoves = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            noOfMoves++;
             button1.Enabled = false;
+            if (onMove == "X")
+            {
+                onMove = "O";
+                button1.BackgroundImage = Properties.Resources.X;
+            }
+            else
+            {
+                onMove = "X";
+                button1.BackgroundImage = Properties.Resources.O;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            noOfMoves++;
+            if (onMove == "X")
+            {
+                onMove = "O";
+                button1.BackgroundImage = Properties.Resources.X;
+            }
+            else
+            {
+                onMove = "X";
+                button1.BackgroundImage = Properties.Resources.O;
+            }
             button2.Enabled = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            noOfMoves++;
+            if (onMove == "X")
+            {
+                onMove = "O";
+                button1.BackgroundImage = Properties.Resources.X;
+            }
+            else
+            {
+                onMove = "X";
+                button1.BackgroundImage = Properties.Resources.O;
+            }
             button3.Enabled = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            noOfMoves++;
+            if (onMove == "X")
+            {
+                onMove = "O";
+                button1.BackgroundImage = Properties.Resources.X;
+            }
+            else
+            {
+                onMove = "X";
+                button1.BackgroundImage = Properties.Resources.O;
+            }
             button4.Enabled = false;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            noOfMoves++;
+            if (onMove == "X")
+            {
+                onMove = "O";
+                button1.BackgroundImage = Properties.Resources.X;
+            }
+            else
+            {
+                onMove = "X";
+                button1.BackgroundImage = Properties.Resources.O;
+            }
             button5.Enabled = false;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            noOfMoves++;
+            if (onMove == "X")
+            {
+                onMove = "O";
+                button1.BackgroundImage = Properties.Resources.X;
+            }
+            else
+            {
+                onMove = "X";
+                button1.BackgroundImage = Properties.Resources.O;
+            }
             button6.Enabled = false;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            noOfMoves++;
+            if (onMove == "X")
+            {
+                onMove = "O";
+                button1.BackgroundImage = Properties.Resources.X;
+            }
+            else
+            {
+                onMove = "X";
+                button1.BackgroundImage = Properties.Resources.O;
+            }
             button7.Enabled = false;
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
+            noOfMoves++;
+            if (onMove == "X")
+            {
+                onMove = "O";
+                button1.BackgroundImage = Properties.Resources.X;
+            }
+            else
+            {
+                onMove = "X";
+                button1.BackgroundImage = Properties.Resources.O;
+            }
             button8.Enabled = false;
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
+            noOfMoves++;
+            if (onMove == "X")
+            {
+                onMove = "O";
+                button1.BackgroundImage = Properties.Resources.X;
+            }
+            else
+            {
+                onMove = "X";
+                button1.BackgroundImage = Properties.Resources.O;
+            }
             button9.Enabled = false;
         }
 
