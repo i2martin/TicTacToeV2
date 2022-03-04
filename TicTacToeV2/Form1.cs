@@ -27,7 +27,7 @@ namespace TicTacToeV2
         }
         int winX = 0;
         int winO = 0;
-        string onMove = "x";
+        string onMove = "X";
         int noOfMoves = 0;
 
         private void NewGame_Click(object sender, EventArgs e)
@@ -67,12 +67,12 @@ namespace TicTacToeV2
             if (onMove == "X")
             {
                 onMove = "O";
-                button1.BackgroundImage = Properties.Resources.X;
+                button2.BackgroundImage = Properties.Resources.X;
             }
             else
             {
                 onMove = "X";
-                button1.BackgroundImage = Properties.Resources.O;
+                button2.BackgroundImage = Properties.Resources.O;
             }
             button2.Enabled = false;
         }
@@ -83,12 +83,12 @@ namespace TicTacToeV2
             if (onMove == "X")
             {
                 onMove = "O";
-                button1.BackgroundImage = Properties.Resources.X;
+                button3.BackgroundImage = Properties.Resources.X;
             }
             else
             {
                 onMove = "X";
-                button1.BackgroundImage = Properties.Resources.O;
+                button3.BackgroundImage = Properties.Resources.O;
             }
             button3.Enabled = false;
         }
@@ -99,12 +99,12 @@ namespace TicTacToeV2
             if (onMove == "X")
             {
                 onMove = "O";
-                button1.BackgroundImage = Properties.Resources.X;
+                button4.BackgroundImage = Properties.Resources.X;
             }
             else
             {
                 onMove = "X";
-                button1.BackgroundImage = Properties.Resources.O;
+                button4.BackgroundImage = Properties.Resources.O;
             }
             button4.Enabled = false;
         }
@@ -115,12 +115,12 @@ namespace TicTacToeV2
             if (onMove == "X")
             {
                 onMove = "O";
-                button1.BackgroundImage = Properties.Resources.X;
+                button5.BackgroundImage = Properties.Resources.X;
             }
             else
             {
                 onMove = "X";
-                button1.BackgroundImage = Properties.Resources.O;
+                button5.BackgroundImage = Properties.Resources.O;
             }
             button5.Enabled = false;
         }
@@ -131,12 +131,12 @@ namespace TicTacToeV2
             if (onMove == "X")
             {
                 onMove = "O";
-                button1.BackgroundImage = Properties.Resources.X;
+                button6.BackgroundImage = Properties.Resources.X;
             }
             else
             {
                 onMove = "X";
-                button1.BackgroundImage = Properties.Resources.O;
+                button6.BackgroundImage = Properties.Resources.O;
             }
             button6.Enabled = false;
         }
@@ -147,12 +147,12 @@ namespace TicTacToeV2
             if (onMove == "X")
             {
                 onMove = "O";
-                button1.BackgroundImage = Properties.Resources.X;
+                button7.BackgroundImage = Properties.Resources.X;
             }
             else
             {
                 onMove = "X";
-                button1.BackgroundImage = Properties.Resources.O;
+                button7.BackgroundImage = Properties.Resources.O;
             }
             button7.Enabled = false;
         }
@@ -163,12 +163,12 @@ namespace TicTacToeV2
             if (onMove == "X")
             {
                 onMove = "O";
-                button1.BackgroundImage = Properties.Resources.X;
+                button8.BackgroundImage = Properties.Resources.X;
             }
             else
             {
                 onMove = "X";
-                button1.BackgroundImage = Properties.Resources.O;
+                button8.BackgroundImage = Properties.Resources.O;
             }
             button8.Enabled = false;
         }
@@ -179,12 +179,12 @@ namespace TicTacToeV2
             if (onMove == "X")
             {
                 onMove = "O";
-                button1.BackgroundImage = Properties.Resources.X;
+                button9.BackgroundImage = Properties.Resources.X;
             }
             else
             {
                 onMove = "X";
-                button1.BackgroundImage = Properties.Resources.O;
+                button9.BackgroundImage = Properties.Resources.O;
             }
             button9.Enabled = false;
         }
