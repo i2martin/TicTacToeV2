@@ -29,6 +29,7 @@ namespace TicTacToeV2
         int winO = 0;
         string onMove = "X";
         int noOfMoves = 0;
+        string[] occupiedFields = new string[9];
 
         private void NewGame_Click(object sender, EventArgs e)
         {
@@ -42,37 +43,70 @@ namespace TicTacToeV2
             button8.Enabled = true;
             button9.Enabled = true;
             NewGame.Enabled = false;
+            button1.BackgroundImage = base.BackgroundImage;
+            button2.BackgroundImage = base.BackgroundImage;
+            button3.BackgroundImage = base.BackgroundImage;
+            button4.BackgroundImage = base.BackgroundImage;
+            button5.BackgroundImage = base.BackgroundImage;
+            button6.BackgroundImage = base.BackgroundImage;
+            button7.BackgroundImage = base.BackgroundImage;
+            button8.BackgroundImage = base.BackgroundImage;
+            button9.BackgroundImage = base.BackgroundImage;
+            for (int i = 0; i < occupiedFields.Length; i++)
+            {
+                occupiedFields[i] = "";
+            }
             noOfMoves = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            noOfMoves++;
+            noOfMoves++;          
             button1.Enabled = false;
             if (onMove == "X")
-            {
-                onMove = "O";
+            {               
                 button1.BackgroundImage = Properties.Resources.X;
+                occupiedFields[0] = "X";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "O";
             }
             else
-            {
-                onMove = "X";
+            {                
                 button1.BackgroundImage = Properties.Resources.O;
-            }
+                occupiedFields[0] = "O";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "X";
+            }          
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             noOfMoves++;
             if (onMove == "X")
-            {
-                onMove = "O";
+            {              
                 button2.BackgroundImage = Properties.Resources.X;
+                occupiedFields[1] = "X";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "O";
             }
             else
-            {
-                onMove = "X";
+            {            
                 button2.BackgroundImage = Properties.Resources.O;
+                occupiedFields[1] = "O";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "X";
             }
             button2.Enabled = false;
         }
@@ -82,13 +116,23 @@ namespace TicTacToeV2
             noOfMoves++;
             if (onMove == "X")
             {
-                onMove = "O";
                 button3.BackgroundImage = Properties.Resources.X;
+                occupiedFields[2] = "X";
+                    if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "O";
             }
             else
             {
-                onMove = "X";
                 button3.BackgroundImage = Properties.Resources.O;
+                occupiedFields[2] = "O";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "X";
             }
             button3.Enabled = false;
         }
@@ -98,13 +142,23 @@ namespace TicTacToeV2
             noOfMoves++;
             if (onMove == "X")
             {
-                onMove = "O";
                 button4.BackgroundImage = Properties.Resources.X;
+                occupiedFields[3] = "X";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "O";
             }
             else
             {
-                onMove = "X";
                 button4.BackgroundImage = Properties.Resources.O;
+                occupiedFields[3] = "O";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "X";
             }
             button4.Enabled = false;
         }
@@ -114,13 +168,23 @@ namespace TicTacToeV2
             noOfMoves++;
             if (onMove == "X")
             {
-                onMove = "O";
                 button5.BackgroundImage = Properties.Resources.X;
+                occupiedFields[4] = "X";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "O";
             }
             else
             {
-                onMove = "X";
                 button5.BackgroundImage = Properties.Resources.O;
+                occupiedFields[4] = "O";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "X";
             }
             button5.Enabled = false;
         }
@@ -130,13 +194,23 @@ namespace TicTacToeV2
             noOfMoves++;
             if (onMove == "X")
             {
-                onMove = "O";
                 button6.BackgroundImage = Properties.Resources.X;
+                occupiedFields[5] = "X";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "O";
             }
             else
             {
-                onMove = "X";
                 button6.BackgroundImage = Properties.Resources.O;
+                occupiedFields[5] = "O";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "X";
             }
             button6.Enabled = false;
         }
@@ -146,13 +220,23 @@ namespace TicTacToeV2
             noOfMoves++;
             if (onMove == "X")
             {
-                onMove = "O";
                 button7.BackgroundImage = Properties.Resources.X;
+                occupiedFields[6] = "X";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "O";
             }
             else
             {
-                onMove = "X";
                 button7.BackgroundImage = Properties.Resources.O;
+                occupiedFields[6] = "O";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "X";
             }
             button7.Enabled = false;
         }
@@ -162,13 +246,23 @@ namespace TicTacToeV2
             noOfMoves++;
             if (onMove == "X")
             {
-                onMove = "O";
                 button8.BackgroundImage = Properties.Resources.X;
+                occupiedFields[7] = "X";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "O";
             }
             else
             {
-                onMove = "X";
                 button8.BackgroundImage = Properties.Resources.O;
+                occupiedFields[7] = "O";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "X";
             }
             button8.Enabled = false;
         }
@@ -178,13 +272,23 @@ namespace TicTacToeV2
             noOfMoves++;
             if (onMove == "X")
             {
-                onMove = "O";
                 button9.BackgroundImage = Properties.Resources.X;
+                occupiedFields[8] = "X";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "O";
             }
             else
             {
-                onMove = "X";
                 button9.BackgroundImage = Properties.Resources.O;
+                occupiedFields[8] = "O";
+                if (noOfMoves > 4)
+                {
+                    CheckVictory();
+                }
+                onMove = "X";
             }
             button9.Enabled = false;
         }
@@ -192,6 +296,46 @@ namespace TicTacToeV2
         private void label2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        public void CheckVictory()
+        {
+            if ((occupiedFields[0] == onMove && occupiedFields[1] == onMove && occupiedFields[2] == onMove)||
+                (occupiedFields[3] == onMove && occupiedFields[4] == onMove && occupiedFields[5] == onMove)||
+                (occupiedFields[6] == onMove && occupiedFields[7] == onMove && occupiedFields[8] == onMove)||
+                (occupiedFields[0] == onMove && occupiedFields[3] == onMove && occupiedFields[6] == onMove)||
+                (occupiedFields[1] == onMove && occupiedFields[4] == onMove && occupiedFields[7] == onMove)||
+                (occupiedFields[2] == onMove && occupiedFields[5] == onMove && occupiedFields[8] == onMove)||
+                (occupiedFields[0] == onMove && occupiedFields[4] == onMove && occupiedFields[8] == onMove)||
+                (occupiedFields[2] == onMove && occupiedFields[4] == onMove && occupiedFields[6] == onMove))
+            {
+                if (onMove == "X")
+                {
+                    winX++;
+                    onMove = "O";
+                    NewGame.Enabled = true;
+                }
+                else
+                {
+                    winO++;
+                    onMove = "X";
+                    NewGame.Enabled = true;
+                }
+
+            }
+            else if (noOfMoves == 9)
+            {
+                //Draw
+                if (onMove == "X")
+                {
+                    onMove = "O";
+                    NewGame.Enabled = true;
+                }
+                else
+                {
+                    onMove = "X";
+                }
+            }
         }
     }
 }

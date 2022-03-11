@@ -72,7 +72,7 @@ namespace TicTacToeV2
             this.NewGame.Name = "NewGame";
             this.NewGame.Size = new System.Drawing.Size(256, 35);
             this.NewGame.TabIndex = 9;
-            this.NewGame.Text = "button10";
+            this.NewGame.Text = "New Game";
             this.NewGame.UseVisualStyleBackColor = true;
             this.NewGame.Click += new System.EventHandler(this.NewGame_Click);
             // 
