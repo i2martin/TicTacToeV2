@@ -356,6 +356,7 @@ namespace TicTacToeV2
                 else
                 {
                     onMove = "X";
+                    NewGame.Enabled = true;
                 }
             }
         }
