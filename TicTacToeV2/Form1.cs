@@ -315,6 +315,15 @@ namespace TicTacToeV2
                     if (player1.Text != "") player1Label.Text = player1.Text + ": " + winX;
                     else player1Label.Text = "Player 1: " + winX;
                     onMove = "O";
+                    button1.Enabled = false;
+                    button2.Enabled = false;
+                    button3.Enabled = false;
+                    button4.Enabled = false;
+                    button5.Enabled = false;
+                    button6.Enabled = false;
+                    button7.Enabled = false;
+                    button8.Enabled = false;
+                    button9.Enabled = false;
                     NewGame.Enabled = true;
                 }
                 else
@@ -323,6 +332,15 @@ namespace TicTacToeV2
                     if (player2.Text != "") player2Label.Text = player2.Text + ": " + winO;
                     else player2Label.Text = "Player 2: " + winO;
                     onMove = "X";
+                    button1.Enabled = false;
+                    button2.Enabled = false;
+                    button3.Enabled = false;
+                    button4.Enabled = false;
+                    button5.Enabled = false;
+                    button6.Enabled = false;
+                    button7.Enabled = false;
+                    button8.Enabled = false;
+                    button9.Enabled = false;
                     NewGame.Enabled = true;
                 }
 
