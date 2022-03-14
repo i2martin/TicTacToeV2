@@ -43,13 +43,28 @@ namespace TicTacToeV2
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Settings = new FontAwesome.Sharp.IconButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.player1 = new System.Windows.Forms.TextBox();
+            this.player2 = new System.Windows.Forms.TextBox();
+            this.player1Label = new System.Windows.Forms.Label();
+            this.player2Label = new System.Windows.Forms.Label();
+            this.saveSettings = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
+            this.panel1.Controls.Add(this.player2Label);
+            this.panel1.Controls.Add(this.player1Label);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.NewGame);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button8);
@@ -187,6 +202,7 @@ namespace TicTacToeV2
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.panel2.Controls.Add(this.Settings);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -217,6 +233,112 @@ namespace TicTacToeV2
             this.label1.TabIndex = 0;
             this.label1.Text = "Tic Tac Toe";
             // 
+            // Settings
+            // 
+            this.Settings.FlatAppearance.BorderSize = 0;
+            this.Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Settings.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.Settings.IconColor = System.Drawing.Color.Black;
+            this.Settings.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Settings.IconSize = 30;
+            this.Settings.Location = new System.Drawing.Point(520, 3);
+            this.Settings.Name = "Settings";
+            this.Settings.Size = new System.Drawing.Size(52, 35);
+            this.Settings.TabIndex = 2;
+            this.Settings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Settings.UseVisualStyleBackColor = true;
+            this.Settings.Click += new System.EventHandler(this.Settings_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.groupBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(600, 600);
+            this.panel3.TabIndex = 10;
+            this.panel3.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.saveSettings);
+            this.groupBox1.Controls.Add(this.player2);
+            this.groupBox1.Controls.Add(this.player1);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Location = new System.Drawing.Point(209, 150);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(210, 125);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Settings";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Player 1:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Player 2:";
+            // 
+            // player1
+            // 
+            this.player1.Location = new System.Drawing.Point(70, 21);
+            this.player1.Name = "player1";
+            this.player1.Size = new System.Drawing.Size(118, 20);
+            this.player1.TabIndex = 2;
+            // 
+            // player2
+            // 
+            this.player2.Location = new System.Drawing.Point(70, 47);
+            this.player2.Name = "player2";
+            this.player2.Size = new System.Drawing.Size(118, 20);
+            this.player2.TabIndex = 3;
+            // 
+            // player1Label
+            // 
+            this.player1Label.AutoSize = true;
+            this.player1Label.Location = new System.Drawing.Point(171, 107);
+            this.player1Label.Name = "player1Label";
+            this.player1Label.Size = new System.Drawing.Size(48, 13);
+            this.player1Label.TabIndex = 11;
+            this.player1Label.Text = "Player 1:";
+            // 
+            // player2Label
+            // 
+            this.player2Label.AutoSize = true;
+            this.player2Label.Location = new System.Drawing.Point(348, 107);
+            this.player2Label.Name = "player2Label";
+            this.player2Label.Size = new System.Drawing.Size(48, 13);
+            this.player2Label.TabIndex = 12;
+            this.player2Label.Text = "Player 2:";
+            // 
+            // saveSettings
+            // 
+            this.saveSettings.FlatAppearance.BorderSize = 0;
+            this.saveSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveSettings.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.saveSettings.IconColor = System.Drawing.Color.Black;
+            this.saveSettings.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.saveSettings.IconSize = 30;
+            this.saveSettings.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.saveSettings.Location = new System.Drawing.Point(85, 73);
+            this.saveSettings.Name = "saveSettings";
+            this.saveSettings.Size = new System.Drawing.Size(39, 36);
+            this.saveSettings.TabIndex = 4;
+            this.saveSettings.UseVisualStyleBackColor = true;
+            this.saveSettings.Click += new System.EventHandler(this.saveSettings_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,8 +352,12 @@ namespace TicTacToeV2
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -252,6 +378,16 @@ namespace TicTacToeV2
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel3;
+        private FontAwesome.Sharp.IconButton Settings;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox player2;
+        private System.Windows.Forms.TextBox player1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label player2Label;
+        private System.Windows.Forms.Label player1Label;
+        private FontAwesome.Sharp.IconButton saveSettings;
     }
 }
 

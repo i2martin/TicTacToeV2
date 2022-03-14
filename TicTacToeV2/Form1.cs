@@ -30,7 +30,7 @@ namespace TicTacToeV2
         string onMove = "X";
         int noOfMoves = 0;
         string[] occupiedFields = new string[9];
-
+        bool togglePanel = false;
         private void NewGame_Click(object sender, EventArgs e)
         {
             button1.Enabled = true;
@@ -312,6 +312,7 @@ namespace TicTacToeV2
                 if (onMove == "X")
                 {
                     winX++;
+                    player1Label.Text = player1.Text + ": " + winX;
                     onMove = "O";
                     NewGame.Enabled = true;
                 }
@@ -319,6 +320,7 @@ namespace TicTacToeV2
                 {
                     winO++;
                     onMove = "X";
+                    player2Label.Text = player2.Text + ": " + winO;
                     NewGame.Enabled = true;
                 }
 
@@ -336,6 +338,27 @@ namespace TicTacToeV2
                     onMove = "X";
                 }
             }
+        }
+
+        private void Settings_Click(object sender, EventArgs e)
+        {
+            if (togglePanel == false)
+            {
+                togglePanel = true;
+                panel3.Visible = true;
+            }
+            else
+            {
+                togglePanel = false;
+                panel3.Visible = false;
+            }
+
+        }
+
+        private void saveSettings_Click(object sender, EventArgs e)
+        {
+            if (player1.Text != "") player1Label.Text = player1.Text + ": " + winX;
+            if (player2.Text != "") player2Label.Text = player2.Text + ": " + winO;
         }
     }
 }
