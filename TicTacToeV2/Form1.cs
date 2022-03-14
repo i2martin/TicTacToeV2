@@ -24,6 +24,7 @@ namespace TicTacToeV2
             button7.Enabled = false;
             button8.Enabled = false;
             button9.Enabled = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         int winX = 0;
         int winO = 0;
@@ -31,6 +32,8 @@ namespace TicTacToeV2
         int noOfMoves = 0;
         string[] occupiedFields = new string[9];
         bool togglePanel = false;
+        bool changePosition = false;
+        public Point lastLocation;
         private void NewGame_Click(object sender, EventArgs e)
         {
             button1.Enabled = true;
@@ -380,6 +383,27 @@ namespace TicTacToeV2
         {
             if (player1.Text != "") player1Label.Text = player1.Text + ": " + winX;
             if (player2.Text != "") player2Label.Text = player2.Text + ": " + winO;
+        }
+
+        private void topPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            changePosition = true;
+            lastLocation = e.Location;
+        }
+
+        private void topPanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            changePosition = false;
+        }
+
+        private void topPanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (changePosition == true)
+            {
+                this.Location = new Point((this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+            }
+
         }
     }
 }
