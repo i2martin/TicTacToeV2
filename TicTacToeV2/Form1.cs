@@ -315,8 +315,16 @@ namespace TicTacToeV2
                 if (onMove == "X")
                 {
                     winX++;
-                    if (player1.Text != "") player1Label.Text = player1.Text + ": " + winX;
-                    else player1Label.Text = "Player 1: " + winX;
+                    if (player1.Text != "" || player2.Text != "")
+                    {
+                        player1Label.Text = player1.Text + ": " + winX;
+                        player2Label.Text = player2.Text + ": " + winO;
+                    }
+                    else
+                    {
+                        player1Label.Text = "Player 1: " + winX;
+                        player2Label.Text = "Player 2: " + winO;
+                    }
                     onMove = "O";
                     button1.Enabled = false;
                     button2.Enabled = false;
@@ -332,8 +340,16 @@ namespace TicTacToeV2
                 else
                 {
                     winO++;
-                    if (player2.Text != "") player2Label.Text = player2.Text + ": " + winO;
-                    else player2Label.Text = "Player 2: " + winO;
+                    if (player1.Text != "" || player2.Text != "")
+                    {
+                        player1Label.Text = player1.Text + ": " + winX;
+                        player2Label.Text = player2.Text + ": " + winO;
+                    }
+                    else
+                    {
+                        player1Label.Text = "Player 1: " + winX;
+                        player2Label.Text = "Player 2: " + winO;
+                    }
                     onMove = "X";
                     button1.Enabled = false;
                     button2.Enabled = false;
