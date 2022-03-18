@@ -405,5 +405,10 @@ namespace TicTacToeV2
             }
 
         }
+
+        private void CloseAppButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

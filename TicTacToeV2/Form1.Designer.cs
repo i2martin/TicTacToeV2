@@ -51,8 +51,8 @@ namespace TicTacToeV2
             this.button1 = new System.Windows.Forms.Button();
             this.topPanel = new System.Windows.Forms.Panel();
             this.Settings = new FontAwesome.Sharp.IconButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.CloseAppButton = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -292,8 +292,8 @@ namespace TicTacToeV2
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.topPanel.Controls.Add(this.CloseAppButton);
             this.topPanel.Controls.Add(this.Settings);
-            this.topPanel.Controls.Add(this.label2);
             this.topPanel.Controls.Add(this.label1);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
@@ -312,25 +312,13 @@ namespace TicTacToeV2
             this.Settings.IconColor = System.Drawing.Color.Black;
             this.Settings.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Settings.IconSize = 30;
-            this.Settings.Location = new System.Drawing.Point(520, 3);
+            this.Settings.Location = new System.Drawing.Point(523, 3);
             this.Settings.Name = "Settings";
-            this.Settings.Size = new System.Drawing.Size(52, 35);
+            this.Settings.Size = new System.Drawing.Size(33, 35);
             this.Settings.TabIndex = 2;
             this.Settings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Settings.UseVisualStyleBackColor = true;
             this.Settings.Click += new System.EventHandler(this.Settings_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(578, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 22);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "X";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -341,6 +329,22 @@ namespace TicTacToeV2
             this.label1.Size = new System.Drawing.Size(108, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tic Tac Toe";
+            // 
+            // CloseAppButton
+            // 
+            this.CloseAppButton.FlatAppearance.BorderSize = 0;
+            this.CloseAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseAppButton.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.CloseAppButton.IconColor = System.Drawing.Color.Black;
+            this.CloseAppButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CloseAppButton.IconSize = 30;
+            this.CloseAppButton.Location = new System.Drawing.Point(562, 3);
+            this.CloseAppButton.Name = "CloseAppButton";
+            this.CloseAppButton.Size = new System.Drawing.Size(33, 35);
+            this.CloseAppButton.TabIndex = 3;
+            this.CloseAppButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CloseAppButton.UseVisualStyleBackColor = true;
+            this.CloseAppButton.Click += new System.EventHandler(this.CloseAppButton_Click);
             // 
             // Form1
             // 
@@ -380,7 +384,6 @@ namespace TicTacToeV2
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconButton Settings;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -391,6 +394,7 @@ namespace TicTacToeV2
         private System.Windows.Forms.Label player2Label;
         private System.Windows.Forms.Label player1Label;
         private FontAwesome.Sharp.IconButton saveSettings;
+        private FontAwesome.Sharp.IconButton CloseAppButton;
     }
 }
 
